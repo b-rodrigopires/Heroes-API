@@ -13,9 +13,9 @@ import static com.rodrigo.superhero.constants.HeroesConstant.REGION_DYNAMO;
 public class HeroesData {
   public static void main(String[] args) throws Exception {
 
-    AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
-      .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
-      .build();
+    AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard().build();
+    //  .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
+    //  .build();
     DynamoDB dynamoDB = new DynamoDB(client);
 
     Table table = dynamoDB.getTable("Heroes_Api_Table");
